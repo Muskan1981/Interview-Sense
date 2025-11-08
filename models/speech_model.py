@@ -9,7 +9,8 @@ import scipy.signal
 import time
 from vosk import Model, KaldiRecognizer
 
-# Load Vosk model once globally
+
+# Loading the Vosk model once globally
 model = Model(model_name="vosk-model-small-en-us-0.15")
 
 # Global flags / buffers
