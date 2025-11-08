@@ -115,11 +115,15 @@ class AIInterviewCoach:
         self.upload_btn.grid(row=0, column=2, padx=20)
 
         self.progress = ttk.Progressbar(self.root, orient="horizontal", mode="indeterminate", length=400)
-        self.progress.pack(pady=10)
-
-        self.footer = tk.Label(self.root, text="⚙️ Developed by Interview Architects
-         | AI-Enhanced Coaching",
-                               fg="#90CAF9", bg="#0E1116", font=("Segoe UI", 11))
+          # Footer
+        self.footer = tk.Label(
+            self.root,
+            text="⚙️ Developed by Interview Architects | AI-Enhanced Coaching",
+            fg="#90CAF9",
+            bg="#0E1116",
+            font=("Segoe UI", 11)
+        )
+        self.footer.pack(side="bottom", pady=10)
         self.footer.pack(side="bottom", pady=10)
 
         self.animate_title()
