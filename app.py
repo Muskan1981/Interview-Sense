@@ -284,10 +284,16 @@ class AIInterviewCoach:
 
         if overall > 85:
             comment = "🌟 Excellent confidence and clarity!"
+        elif overall > 75:
+            comment = "👍 Solid performance, room for minor tweaks."
         elif overall > 65:
             comment = "💪 Good performance, just refine consistency."
-        else:
+        elif overall > 50:
+            comment = "🔧 Fair effort, consider practicing more."
+        elif overall > 40:
             comment = "⚡ Needs improvement in posture and tone."
+        else:
+            comment = "⚠️ Needs significant improvement."
 
         for label, score, color in [("🧍 Posture", posture_score, "#4CAF50"),
                                     ("👀 Eye Contact", eye_score, "#2196F3"),
@@ -300,7 +306,8 @@ class AIInterviewCoach:
         labels = ["Posture", "Eye Contact", "Speech"]
         values = [posture_score, eye_score, speech_score]
         colors = ["#4CAF50", "#2196F3", "#FFC107"]
-        fig, ax = plt.subplots(figsize=(3.5, 3.5))
+      #  fig, ax = plt.subplots(figsize=(3.5, 3.5))
+        fig, ax = plt.subplots(figsize=(5, 5))
         ax.pie(values, labels=labels, autopct="%1.1f%%", colors=colors)
         buf = BytesIO()
         plt.savefig(buf, format="png")
