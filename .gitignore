@@ -1,6 +1,19 @@
-venv/ 
-__pycache__/ 
-*.pyc 
-*.pyo 
-*.wav 
-*.jpg 
+# venv/ 
+# __pycache__/ 
+# *.pyc 
+# *.pyo 
+# *.wav 
+# *.jpg 
+__pycache__/
+*.pyc
+venv/
+env/
+*.wav
+*.mp4
+*.mov
+*.avi
+*.log
+vosk-model-small-en-us-0.15/
+*.egg-info/
+.idea/
+.DS_Store
