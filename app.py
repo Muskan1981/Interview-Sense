@@ -301,12 +301,13 @@ class AIInterviewCoach:
             tk.Label(summary, text=f"{label}: {score}%", fg=color, bg="#111", font=("Segoe UI", 16)).pack(pady=4)
 
         tk.Label(summary, text=f"🎯 Overall Score: {overall}% | {comment}",
-                 fg="#FFD740", bg="#111", font=("Segoe UI Black", 18)).pack(pady=10)
+                 fg="#FFD740", bg="#111", font=("Segoe UI Black", 18)).pack(pady=10) 
+        
 
         labels = ["Posture", "Eye Contact", "Speech"]
         values = [posture_score, eye_score, speech_score]
         colors = ["#4CAF50", "#2196F3", "#FFC107"]
-      #  fig, ax = plt.subplots(figsize=(3.5, 3.5))
+      # fig, ax = plt.subplots(figsize=(3.5, 3.5))
         fig, ax = plt.subplots(figsize=(5, 5))
         ax.pie(values, labels=labels, autopct="%1.1f%%", colors=colors)
         buf = BytesIO()
